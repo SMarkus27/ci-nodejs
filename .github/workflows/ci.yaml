@@ -1,5 +1,8 @@
 name: ci-nodejs
-on: [push]
+on:
+  pull_request:
+    branches:
+      - develop
 
 jobs:
   check-application:
@@ -11,3 +14,8 @@ jobs:
           node-version: 18
       - run: npm install
       - run: npm test
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
