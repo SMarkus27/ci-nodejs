@@ -1,0 +1,10 @@
+name: ci-nodejs
+on:
+  pull_request:
+    branches:
+      - develop
+jobs:
+  check-application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
