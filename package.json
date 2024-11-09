@@ -9,7 +9,7 @@
     "ts-node": "^10.9.2"
   },
   "scripts": {
-    "test": "yarn tsc -- --noEmit && jest",
+    "test": "yarn tsc -- --noEmit && jest ",
     "tsc": "tsc"
   }
 }
