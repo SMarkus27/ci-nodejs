@@ -6,3 +6,9 @@ it("should return hello Marcus", () => {
 
     expect(sayHello(name)).toEqual("Hello Marcus!");
 })
+
+it("should return hello John", () => {
+    const name = "John";
+
+    expect(sayHello(name)).toEqual("Hello John!");
+})
